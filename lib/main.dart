@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:prof_design_app/src/pages/animated_cube_page.dart';
+import 'package:prof_design_app/src/pages/animations_page.dart';
 import 'package:prof_design_app/src/pages/headers_page.dart';
 
 void main() {
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Professional Designs App',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: HeadersPage(),
+      home: AnimatedCubePage(),
     );
   }
 }

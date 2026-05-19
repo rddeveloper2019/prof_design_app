@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:prof_design_app/src/pages/animated_cube_page.dart';
 import 'package:prof_design_app/src/pages/animations_page.dart';
 import 'package:prof_design_app/src/pages/headers_page.dart';
+import 'package:prof_design_app/src/pages/pinterest_page.dart';
 import 'package:prof_design_app/src/pages/radial_progress_page.dart';
 import 'package:prof_design_app/src/pages/slide_show_page.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Professional Designs App',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: SlideShowPage(),
+      home: PinterestPage(),
     );
   }
 }

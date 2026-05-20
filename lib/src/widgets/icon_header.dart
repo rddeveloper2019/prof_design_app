@@ -42,6 +42,19 @@ class IconHeader extends StatelessWidget {
             FaIcon(FontAwesomeIcons.plus, size: 90, color: Colors.white),
           ],
         ),
+        Positioned(
+          right: 0,
+          top: 50,
+          child: RawMaterialButton(
+            onPressed: () {},
+            shape: CircleBorder(),
+            padding: EdgeInsets.all(15),
+            child: FaIcon(
+              FontAwesomeIcons.ellipsisVertical,
+              color: Colors.white,
+            ),
+          ),
+        ),
       ],
     );
   }

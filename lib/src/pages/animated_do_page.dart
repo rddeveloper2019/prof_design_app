@@ -1,42 +1,32 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:prof_design_app/src/theme/theme.dart';
+import 'package:provider/provider.dart';
 
-import '../animate_do_app.dart';
-
-class FirstPage extends StatelessWidget {
-  const FirstPage({super.key});
+class AnimateDoPage extends StatelessWidget {
+  const AnimateDoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final appTheme = Provider.of<ThemeChanger>(context);
+    final reverseColor = appTheme.darkTheme
+        ? appTheme.currentTheme.primaryColorLight
+        : appTheme.currentTheme.primaryColorDark;
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: reverseColor,
+        backgroundColor: appTheme.currentTheme.scaffoldBackgroundColor,
         title: FadeIn(delay: Duration(milliseconds: 500), child: Text('Animate_do')),
         actions: [
           IconButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) {
-                    return TwitterPage();
-                  },
-                ),
-              );
-            },
+            onPressed: () {},
             icon: FaIcon(FontAwesomeIcons.twitter),
           ),
           SlideInLeft(
             from: 300,
             child: IconButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return FirstPage();
-                    },
-                  ),
-                );
-              },
+              onPressed: () {},
               icon: FaIcon(FontAwesomeIcons.arrowRight),
             ),
           ),
@@ -44,15 +34,7 @@ class FirstPage extends StatelessWidget {
       ),
       floatingActionButton: ElasticInRight(
         child: FloatingActionButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) {
-                  return NavigationPage();
-                },
-              ),
-            );
-          },
+          onPressed: () {},
           child: FaIcon(FontAwesomeIcons.play),
         ),
       ),

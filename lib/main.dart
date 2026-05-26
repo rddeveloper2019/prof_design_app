@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:prof_design_app/src/pages/animated_cube_page.dart';
-import 'package:prof_design_app/src/pages/animations_page.dart';
-import 'package:prof_design_app/src/pages/emergency_page.dart';
-import 'package:prof_design_app/src/pages/headers_page.dart';
-import 'package:prof_design_app/src/pages/pinterest_page.dart';
-import 'package:prof_design_app/src/pages/radial_progress_page.dart';
-import 'package:prof_design_app/src/pages/slide_show_page.dart';
-import 'package:prof_design_app/src/pages/slivers_page.dart';
 
-import 'src/animate_do_app/animate_do_app.dart';
+import 'package:prof_design_app/src/pages/launcher_page.dart';
+import 'package:prof_design_app/src/theme/theme.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ThemeChanger(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,11 +18,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appTheme = Provider.of<ThemeChanger>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Professional Designs App',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: AnimateDoApp(),
+      theme: appTheme.currentTheme,
+      home: LauncherPage(),
     );
   }
 }

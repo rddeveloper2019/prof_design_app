@@ -1,7 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:prof_design_app/src/theme/theme.dart';
 import 'package:prof_design_app/src/widgets/radial_progress.dart';
+import 'package:provider/provider.dart';
 
 class RadialProgressPage extends StatefulWidget {
   const RadialProgressPage({super.key});

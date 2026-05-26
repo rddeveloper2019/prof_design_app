@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:prof_design_app/src/theme/theme.dart';
+import 'package:provider/provider.dart';
 
 class ShowSlider extends StatefulWidget {
   final List<Widget> slides;
@@ -43,8 +45,7 @@ class _ShowSliderState extends State<ShowSlider> {
               ),
             ),
           ),
-          if (widget.showDots)
-            _Dots(length: widget.slides.length, activeIndex: activeIndex),
+          if (widget.showDots) _Dots(length: widget.slides.length, activeIndex: activeIndex),
         ],
       ),
     );
@@ -77,12 +78,14 @@ class _Dot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appTheme = Provider.of<ThemeChanger>(context);
+
     return AnimatedContainer(
       margin: EdgeInsets.symmetric(horizontal: 3),
       width: isActive ? 14 : 12,
       height: isActive ? 14 : 12,
       decoration: BoxDecoration(
-        color: isActive ? Colors.red : Colors.grey,
+        color: isActive ? appTheme.currentTheme.primaryColorDark : Colors.grey,
         shape: BoxShape.circle,
       ),
       duration: Duration(milliseconds: 300),

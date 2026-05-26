@@ -17,8 +17,7 @@ class RadialProgress extends StatefulWidget {
   State<RadialProgress> createState() => _RadialProgressState();
 }
 
-class _RadialProgressState extends State<RadialProgress>
-    with SingleTickerProviderStateMixin {
+class _RadialProgressState extends State<RadialProgress> with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> animatedPercents;
 
@@ -130,7 +129,7 @@ class _RadialProgressPainter extends CustomPainter {
     final textSpan = TextSpan(
       text: '${percents.round()}%',
       style: TextStyle(
-        color: Colors.black87,
+        color: Colors.green,
         fontSize: radius / 2.5,
         fontWeight: FontWeight.bold,
       ),

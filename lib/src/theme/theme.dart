@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ThemeChanger extends ChangeNotifier {
+class ThemeChanger with ChangeNotifier {
   bool _darkTheme = false;
   bool _customTheme = false;
   ThemeData _currentTheme = ThemeData.light();

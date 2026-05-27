@@ -49,30 +49,25 @@ class _PinterestMenuState extends State<PinterestMenu> {
     ];
     return Positioned(
       bottom: 30,
-      child: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        child: Align(
-          child: AnimatedOpacity(
-            opacity: widget.hidden ? 0 : 1,
-            duration: Duration(milliseconds: 200),
-            child: Container(
-              width: 250,
-              height: 60,
-              decoration: BoxDecoration(
-                color: Colors.white.withAlpha(230),
-                borderRadius: BorderRadius.circular(100),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black38,
-                    offset: Offset(0, 0),
-                    blurRadius: 10,
-                    spreadRadius: -5,
-                  ),
-                ],
+      child: AnimatedOpacity(
+        opacity: widget.hidden ? 0 : 1,
+        duration: Duration(milliseconds: 200),
+        child: Container(
+          width: 250,
+          height: 60,
+          decoration: BoxDecoration(
+            color: Colors.white.withAlpha(230),
+            borderRadius: BorderRadius.circular(100),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black38,
+                offset: Offset(0, 0),
+                blurRadius: 10,
+                spreadRadius: -5,
               ),
-              child: MenuBackground(items: items, currentIndex: currentIndex),
-            ),
+            ],
           ),
+          child: MenuBackground(items: items, currentIndex: currentIndex),
         ),
       ),
     );

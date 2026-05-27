@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:prof_design_app/src/models/layout_model.dart';
 import 'package:prof_design_app/src/theme/theme.dart';
 import 'package:prof_design_app/src/widgets/pinterest_menu.dart';
 import 'package:provider/provider.dart';
@@ -31,6 +32,7 @@ class _PinterestPageState extends State<PinterestPage> {
               });
             },
           ),
+
           PinterestMenu(hidden: menuHidden),
         ],
       ),

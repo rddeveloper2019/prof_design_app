@@ -5,8 +5,8 @@ import 'package:prof_design_app/src/widgets/custom_app_bar.dart';
 import 'package:prof_design_app/src/widgets/shoe_card.dart';
 import 'package:prof_design_app/src/widgets/shoe_description.dart';
 
-class ShoesApp extends StatelessWidget {
-  const ShoesApp({super.key});
+class ShoesAppPage extends StatelessWidget {
+  const ShoesAppPage({super.key});
 
   @override
   Widget build(BuildContext context) {

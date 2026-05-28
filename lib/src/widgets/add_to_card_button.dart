@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prof_design_app/src/widgets/custom_button.dart';
 import 'package:prof_design_app/src/widgets/price.dart';
-import 'package:prof_design_app/src/widgets/shoes_desc_page.dart';
+import 'package:prof_design_app/src/pages/shoes_desc_page.dart';
 
 class AddToCartBox extends StatelessWidget {
   final double price;

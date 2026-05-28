@@ -23,7 +23,7 @@ final List<Route> pageRoutes = [
   Route(icon: FontAwesomeIcons.mobileScreen, title: 'Slivers', page: SliversPage()),
   Route(icon: FontAwesomeIcons.map, title: 'Navigation', page: NavigationPage()),
   Route(icon: FontAwesomeIcons.gofore, title: 'AnimateDo', page: AnimateDoPage()),
-  Route(icon: FontAwesomeIcons.shop, title: 'Shoes App', page: ShoesApp()),
+  Route(icon: FontAwesomeIcons.shop, title: 'Shoes App', page: ShoesAppPage()),
 ];
 
 class Route {

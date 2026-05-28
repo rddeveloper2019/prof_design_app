@@ -7,6 +7,7 @@ import 'package:prof_design_app/src/pages/headers_page.dart';
 import 'package:prof_design_app/src/pages/navigation_page.dart';
 import 'package:prof_design_app/src/pages/pinterest_page.dart';
 import 'package:prof_design_app/src/pages/radial_progress_page.dart';
+import 'package:prof_design_app/src/pages/shoes_app_page.dart';
 import 'package:prof_design_app/src/pages/slide_show_page.dart';
 import 'package:prof_design_app/src/pages/slivers_page.dart';
 import 'package:prof_design_app/src/pages/twitter_page.dart';
@@ -22,6 +23,7 @@ final List<Route> pageRoutes = [
   Route(icon: FontAwesomeIcons.mobileScreen, title: 'Slivers', page: SliversPage()),
   Route(icon: FontAwesomeIcons.map, title: 'Navigation', page: NavigationPage()),
   Route(icon: FontAwesomeIcons.gofore, title: 'AnimateDo', page: AnimateDoPage()),
+  Route(icon: FontAwesomeIcons.shop, title: 'Shoes App', page: ShoesApp()),
 ];
 
 class Route {

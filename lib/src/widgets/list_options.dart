@@ -17,9 +17,9 @@ class ListOptions extends StatelessWidget {
         : appTheme.currentTheme.primaryColorDark;
     return ListView.separated(
       itemCount: pageRoutes.length,
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       separatorBuilder: (BuildContext context, int index) {
-        return Divider();
+        return const Divider();
       },
       itemBuilder: (BuildContext context, int index) {
         final pageRoute = pageRoutes[index];

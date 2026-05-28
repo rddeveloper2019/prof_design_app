@@ -5,7 +5,7 @@ class SquareHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(height: 300, color: Color(0xff615aab));
+    return Container(height: 300, color: const Color(0xff615aab));
   }
 }
 
@@ -16,7 +16,7 @@ class CircularBordersHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 300,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xff615aab),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(50),
@@ -37,7 +37,7 @@ class DiagonalHeader extends StatelessWidget {
       width: double.infinity,
       // color: Color(0xff615aab),
       child: CustomPaint(
-        painter: _DiagonalHeaderPainter(color: Color(0xff615aab)),
+        painter: _DiagonalHeaderPainter(color: const Color(0xff615aab)),
       ),
     );
   }
@@ -46,8 +46,7 @@ class DiagonalHeader extends StatelessWidget {
 class _DiagonalHeaderPainter extends CustomPainter {
   final Color _color;
 
-  _DiagonalHeaderPainter({super.repaint, required Color color})
-    : _color = color;
+  _DiagonalHeaderPainter({super.repaint, required Color color}) : _color = color;
   @override
   void paint(Canvas canvas, Size size) {
     //Size(390.0, 844.0)
@@ -80,7 +79,7 @@ class TriangleHeader extends StatelessWidget {
       width: double.infinity,
       // color: Color(0xff615aab),
       child: CustomPaint(
-        painter: _TriangleHeaderPainter(color: Color(0xff615aab)),
+        painter: _TriangleHeaderPainter(color: const Color(0xff615aab)),
       ),
     );
   }
@@ -89,8 +88,7 @@ class TriangleHeader extends StatelessWidget {
 class _TriangleHeaderPainter extends CustomPainter {
   final Color _color;
 
-  _TriangleHeaderPainter({super.repaint, required Color color})
-    : _color = color;
+  _TriangleHeaderPainter({super.repaint, required Color color}) : _color = color;
   @override
   void paint(Canvas canvas, Size size) {
     //Size(390.0, 844.0)
@@ -121,7 +119,7 @@ class PeakHeader extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       // color: Color(0xff615aab),
-      child: CustomPaint(painter: _PeakHeaderPainter(color: Color(0xff615aab))),
+      child: CustomPaint(painter: _PeakHeaderPainter(color: const Color(0xff615aab))),
     );
   }
 }
@@ -163,7 +161,7 @@ class CurvedHeader extends StatelessWidget {
       width: double.infinity,
       // color: Color(0xff615aab),
       child: CustomPaint(
-        painter: _CurvedHeaderPainter(color: Color(0xff615aab)),
+        painter: _CurvedHeaderPainter(color: const Color(0xff615aab)),
       ),
     );
   }
@@ -212,7 +210,7 @@ class WavesHeader extends StatelessWidget {
       width: double.infinity,
       // color: Color(0xff615aab),
       child: CustomPaint(
-        painter: _WavesHeaderPainter(color: Color(0xff615aab)),
+        painter: _WavesHeaderPainter(color: const Color(0xff615aab)),
       ),
     );
   }
@@ -274,9 +272,9 @@ class GradientWavesHeader extends StatelessWidget {
 class _GradientHeaderPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final Rect rect = Rect.fromCircle(center: Offset(0, 30), radius: 190);
+    final Rect rect = Rect.fromCircle(center: const Offset(0, 30), radius: 190);
 
-    final Gradient gradient = LinearGradient(
+    final Gradient gradient = const LinearGradient(
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       colors: [
@@ -290,7 +288,7 @@ class _GradientHeaderPainter extends CustomPainter {
     //Size(390.0, 844.0)
     final paint = Paint();
     paint.shader = gradient.createShader(rect);
-    paint.color = Color(0xff615aab);
+    paint.color = const Color(0xff615aab);
     paint.style = PaintingStyle.fill;
 
     final path = Path();

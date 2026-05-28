@@ -3,7 +3,9 @@ import 'package:prof_design_app/src/models/layout_model.dart';
 
 import 'package:prof_design_app/src/pages/launcher_page.dart';
 import 'package:prof_design_app/src/pages/launcher_tablet_page.dart';
+import 'package:prof_design_app/src/pages/shoes_app_page.dart';
 import 'package:prof_design_app/src/theme/theme.dart';
+import 'package:prof_design_app/src/widgets/shoes_desc_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {

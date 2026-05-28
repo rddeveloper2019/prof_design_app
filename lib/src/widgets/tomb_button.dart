@@ -75,14 +75,14 @@ class _TombButtonBackGround extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 100,
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: Colors.red,
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withAlpha(125),
-            offset: Offset(4, 6),
+            offset: const Offset(4, 6),
             blurRadius: 6,
           ),
         ],

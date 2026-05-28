@@ -17,17 +17,17 @@ class AnimateDoPage extends StatelessWidget {
       appBar: AppBar(
         foregroundColor: reverseColor,
         backgroundColor: appTheme.currentTheme.scaffoldBackgroundColor,
-        title: FadeIn(delay: Duration(milliseconds: 500), child: Text('Animate_do')),
+        title: const FadeIn(delay: Duration(milliseconds: 500), child: Text('Animate_do')),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: FaIcon(FontAwesomeIcons.twitter),
+            icon: const FaIcon(FontAwesomeIcons.twitter),
           ),
           SlideInLeft(
             from: 300,
             child: IconButton(
               onPressed: () {},
-              icon: FaIcon(FontAwesomeIcons.arrowRight),
+              icon: const FaIcon(FontAwesomeIcons.arrowRight),
             ),
           ),
         ],
@@ -35,14 +35,14 @@ class AnimateDoPage extends StatelessWidget {
       floatingActionButton: ElasticInRight(
         child: FloatingActionButton(
           onPressed: () {},
-          child: FaIcon(FontAwesomeIcons.play),
+          child: const FaIcon(FontAwesomeIcons.play),
         ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElasticIn(
+            const ElasticIn(
               delay: Duration(milliseconds: 1300),
               child: FaIcon(
                 FontAwesomeIcons.newspaper,
@@ -50,14 +50,14 @@ class AnimateDoPage extends StatelessWidget {
                 size: 50,
               ),
             ),
-            FadeInDown(
+            const FadeInDown(
               delay: Duration(milliseconds: 300),
               child: Text(
                 'Title',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.w200),
               ),
             ),
-            FadeInDown(
+            const FadeInDown(
               delay: Duration(milliseconds: 600),
               child: Text(
                 'Description',
@@ -65,7 +65,7 @@ class AnimateDoPage extends StatelessWidget {
               ),
             ),
             FadeInLeft(
-              delay: Duration(milliseconds: 300),
+              delay: const Duration(milliseconds: 300),
               child: Container(height: 2, width: 220, color: Colors.blue),
             ),
           ],

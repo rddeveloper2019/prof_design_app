@@ -89,20 +89,6 @@ class _SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
   }
 }
 
-class _BoxList extends StatelessWidget {
-  const _BoxList();
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 20,
-      itemBuilder: (BuildContext ctx, int idx) {
-        return const SliverToBoxAdapter(child: _Box());
-      },
-    );
-  }
-}
-
 class _Box extends StatelessWidget {
   const _Box();
 
@@ -158,15 +144,13 @@ class _Title extends StatelessWidget {
                 decoration: const BoxDecoration(color: Color(0xfff7cdd5)),
               ),
             ),
-            Container(
-              child: const Text(
-                'List',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xffd93a30),
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                ),
+            const Text(
+              'List',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xffd93a30),
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ],

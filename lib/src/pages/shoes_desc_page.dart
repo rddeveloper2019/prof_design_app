@@ -14,42 +14,39 @@ class ShoesDescPage extends StatelessWidget {
       services.SystemUiOverlayStyle.light,
     );
     return const Scaffold(
-      body: Column(
-        children: [
-          ShoeCard(
-            fullScreen: true,
-          ),
-          Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  ShoeDescription(
-                    title: 'Nike Air Max 720',
-                    description:
-                        "The Nike Air Max 720 goes bigger than ever before with Nike's taller Air unit yet, offering more air underfoot for unimaginable, all-day comfort. Has Air Max gone too far? We hope so.",
-                  ),
-                  BuyNow(),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  ColoredButtons(
-                    colors: [
-                      Colors.blueGrey,
-                      Colors.blue,
-                      Colors.orange,
-                      Colors.green,
-                      Colors.red,
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  LikesBox(),
-                ],
-              ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ShoeCard(
+              fullScreen: true,
             ),
-          ),
-        ],
+            ShoeDescription(
+              title: 'Nike Air Max 720',
+              description:
+                  "The Nike Air Max 720 goes bigger than ever before with Nike's taller Air unit yet, offering more air underfoot for unimaginable, all-day comfort. Has Air Max gone too far? We hope so.",
+            ),
+            BuyNow(),
+            SizedBox(
+              height: 10,
+            ),
+            ColoredButtons(
+              colors: [
+                Colors.blueGrey,
+                Colors.blue,
+                Colors.orange,
+                Colors.green,
+                Colors.red,
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            LikesBox(),
+            SizedBox(
+              height: 40,
+            ),
+          ],
+        ),
       ),
     );
   }

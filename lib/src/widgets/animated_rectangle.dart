@@ -25,7 +25,7 @@ class _AnimatedRectangleState extends State<AnimatedRectangle>
 
     controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 4000),
+      duration: const Duration(milliseconds: 4000),
     );
     rotation = Tween<double>(
       begin: 0.0,
@@ -40,13 +40,13 @@ class _AnimatedRectangleState extends State<AnimatedRectangle>
     opacity = Tween<double>(begin: 0.1, end: 1).animate(
       CurvedAnimation(
         parent: controller,
-        curve: Interval(0.15, 0.85, curve: Curves.easeInOut),
+        curve: const Interval(0.15, 0.85, curve: Curves.easeInOut),
       ),
     );
     fadeOut = Tween<double>(begin: 0.0, end: 1).animate(
       CurvedAnimation(
         parent: controller,
-        curve: Interval(0.75, 1, curve: Curves.easeInOut),
+        curve: const Interval(0.75, 1, curve: Curves.easeInOut),
       ),
     );
     scale = Tween<double>(
@@ -96,7 +96,7 @@ class _AnimatedRectangleState extends State<AnimatedRectangle>
       child: Container(
         width: 100,
         height: 100,
-        decoration: BoxDecoration(color: Colors.green),
+        decoration: const BoxDecoration(color: Colors.green),
       ),
     );
   }

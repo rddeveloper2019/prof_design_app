@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:prof_design_app/src/models/layout_model.dart';
 import 'package:prof_design_app/src/theme/theme.dart';
 import 'package:prof_design_app/src/widgets/pinterest_menu.dart';
 import 'package:provider/provider.dart';
@@ -76,8 +75,10 @@ class _PinterestGridState extends State<PinterestGrid> {
       controller: scrollController,
       crossAxisCount: 4,
       itemCount: items.length,
-      itemBuilder: (BuildContext context, int index) => PinterestItem(index: index),
-      staggeredTileBuilder: (int index) => StaggeredTile.count(2, index.isEven ? 2 : 3),
+      itemBuilder: (BuildContext context, int index) =>
+          PinterestItem(index: index),
+      staggeredTileBuilder: (int index) =>
+          StaggeredTile.count(2, index.isEven ? 2 : 3),
       mainAxisSpacing: 4.0,
       crossAxisSpacing: 4.0,
     );
@@ -95,7 +96,7 @@ class PinterestItem extends StatelessWidget {
         ? appTheme.currentTheme.primaryColorLight
         : appTheme.currentTheme.primaryColorDark;
     return Container(
-      margin: EdgeInsets.all(5),
+      margin: const EdgeInsets.all(5),
       decoration: BoxDecoration(
         color: reverseColor,
         borderRadius: BorderRadius.circular(30),

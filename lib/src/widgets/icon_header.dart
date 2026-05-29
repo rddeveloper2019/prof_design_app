@@ -8,7 +8,7 @@ class IconHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        _IconHeaderBg(),
+        const _IconHeaderBg(),
         Positioned(
           top: -50,
           left: -50,
@@ -21,7 +21,7 @@ class IconHeader extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 80, width: double.infinity),
+            const SizedBox(height: 80, width: double.infinity),
             Text(
               'Hanz Solizitao',
               style: TextStyle(
@@ -29,7 +29,7 @@ class IconHeader extends StatelessWidget {
                 color: Colors.white.withAlpha(180),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               'Asistencia Medica',
               style: TextStyle(
@@ -38,8 +38,8 @@ class IconHeader extends StatelessWidget {
                 color: Colors.white.withAlpha(180),
               ),
             ),
-            SizedBox(height: 20),
-            FaIcon(FontAwesomeIcons.plus, size: 90, color: Colors.white),
+            const SizedBox(height: 20),
+            const FaIcon(FontAwesomeIcons.plus, size: 90, color: Colors.white),
           ],
         ),
         Positioned(
@@ -47,9 +47,9 @@ class IconHeader extends StatelessWidget {
           top: 50,
           child: RawMaterialButton(
             onPressed: () {},
-            shape: CircleBorder(),
-            padding: EdgeInsets.all(15),
-            child: FaIcon(
+            shape: const CircleBorder(),
+            padding: const EdgeInsets.all(15),
+            child: const FaIcon(
               FontAwesomeIcons.ellipsisVertical,
               color: Colors.white,
             ),
@@ -68,7 +68,7 @@ class _IconHeaderBg extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 300,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(80)),
         gradient: LinearGradient(
           begin: Alignment.topCenter,

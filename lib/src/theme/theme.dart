@@ -13,8 +13,12 @@ class ThemeChanger with ChangeNotifier {
     _customTheme = false;
     _darkTheme = value;
     _currentTheme = value == true
-        ? ThemeData.dark().copyWith(colorScheme: .fromSeed(seedColor: Colors.orangeAccent))
-        : ThemeData.light().copyWith(colorScheme: .fromSeed(seedColor: Colors.orangeAccent));
+        ? ThemeData.dark().copyWith(
+            colorScheme: .fromSeed(seedColor: Colors.orangeAccent),
+          )
+        : ThemeData.light().copyWith(
+            colorScheme: .fromSeed(seedColor: Colors.orangeAccent),
+          );
 
     notifyListeners();
   }
@@ -35,7 +39,10 @@ class ThemeChanger with ChangeNotifier {
         scaffoldBackgroundColor: const Color(0xFFF5F8F7),
 
         textTheme: const TextTheme(
-          displayLarge: TextStyle(color: Color(0xFF0A2420), fontWeight: FontWeight.w600),
+          displayLarge: TextStyle(
+            color: Color(0xFF0A2420),
+            fontWeight: FontWeight.w600,
+          ),
           bodyLarge: TextStyle(color: Color(0xFF1C2E2A)),
           bodyMedium: TextStyle(color: Color(0xFF4A5D57)),
         ),
@@ -55,13 +62,17 @@ class ThemeChanger with ChangeNotifier {
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF0B7A5F),
             foregroundColor: Colors.white,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
             padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
           ),
         ),
       );
     } else {
-      _currentTheme = ThemeData.light().copyWith(colorScheme: .fromSeed(seedColor: Colors.orangeAccent));
+      _currentTheme = ThemeData.light().copyWith(
+        colorScheme: .fromSeed(seedColor: Colors.orangeAccent),
+      );
     }
     notifyListeners();
   }

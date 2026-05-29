@@ -17,7 +17,8 @@ class RadialProgress extends StatefulWidget {
   State<RadialProgress> createState() => _RadialProgressState();
 }
 
-class _RadialProgressState extends State<RadialProgress> with SingleTickerProviderStateMixin {
+class _RadialProgressState extends State<RadialProgress>
+    with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> animatedPercents;
 
@@ -69,7 +70,7 @@ class _RadialProgressState extends State<RadialProgress> with SingleTickerProvid
       width: double.infinity,
       height: double.infinity,
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: AnimatedBuilder(
           animation: controller,
           builder: (context, child) {

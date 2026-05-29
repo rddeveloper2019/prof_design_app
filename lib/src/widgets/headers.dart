@@ -46,7 +46,7 @@ class DiagonalHeader extends StatelessWidget {
 class _DiagonalHeaderPainter extends CustomPainter {
   final Color _color;
 
-  _DiagonalHeaderPainter({super.repaint, required Color color}) : _color = color;
+  _DiagonalHeaderPainter({required Color color}) : _color = color;
   @override
   void paint(Canvas canvas, Size size) {
     //Size(390.0, 844.0)
@@ -88,7 +88,7 @@ class TriangleHeader extends StatelessWidget {
 class _TriangleHeaderPainter extends CustomPainter {
   final Color _color;
 
-  _TriangleHeaderPainter({super.repaint, required Color color}) : _color = color;
+  _TriangleHeaderPainter({required Color color}) : _color = color;
   @override
   void paint(Canvas canvas, Size size) {
     //Size(390.0, 844.0)
@@ -119,7 +119,9 @@ class PeakHeader extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       // color: Color(0xff615aab),
-      child: CustomPaint(painter: _PeakHeaderPainter(color: const Color(0xff615aab))),
+      child: CustomPaint(
+        painter: _PeakHeaderPainter(color: const Color(0xff615aab)),
+      ),
     );
   }
 }
@@ -127,7 +129,7 @@ class PeakHeader extends StatelessWidget {
 class _PeakHeaderPainter extends CustomPainter {
   final Color _color;
 
-  _PeakHeaderPainter({super.repaint, required Color color}) : _color = color;
+  _PeakHeaderPainter({required Color color}) : _color = color;
   @override
   void paint(Canvas canvas, Size size) {
     //Size(390.0, 844.0)
@@ -170,7 +172,7 @@ class CurvedHeader extends StatelessWidget {
 class _CurvedHeaderPainter extends CustomPainter {
   final Color _color;
 
-  _CurvedHeaderPainter({super.repaint, required Color color}) : _color = color;
+  _CurvedHeaderPainter({required Color color}) : _color = color;
   @override
   void paint(Canvas canvas, Size size) {
     //Size(390.0, 844.0)
@@ -219,7 +221,7 @@ class WavesHeader extends StatelessWidget {
 class _WavesHeaderPainter extends CustomPainter {
   final Color _color;
 
-  _WavesHeaderPainter({super.repaint, required Color color}) : _color = color;
+  _WavesHeaderPainter({required Color color}) : _color = color;
   @override
   void paint(Canvas canvas, Size size) {
     //Size(390.0, 844.0)

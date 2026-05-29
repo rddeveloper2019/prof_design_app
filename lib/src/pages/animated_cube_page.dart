@@ -5,12 +5,12 @@ class AnimatedCubePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: _Rectangle());
+    return const Scaffold(body: _Rectangle());
   }
 }
 
 class _Rectangle extends StatefulWidget {
-  const _Rectangle({super.key});
+  const _Rectangle();
 
   @override
   State<_Rectangle> createState() => __RectangleState();
@@ -31,34 +31,34 @@ class __RectangleState extends State<_Rectangle>
 
     controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 4000),
+      duration: const Duration(milliseconds: 4000),
     );
 
     moveRight = Tween<double>(begin: 0, end: 100).animate(
       CurvedAnimation(
         parent: controller,
-        curve: Interval(0, 0.25, curve: Curves.easeIn),
+        curve: const Interval(0, 0.25, curve: Curves.easeIn),
       ),
     );
 
     moveUp = Tween<double>(begin: 0, end: -100).animate(
       CurvedAnimation(
         parent: controller,
-        curve: Interval(0.25, 0.5, curve: Curves.easeIn),
+        curve: const Interval(0.25, 0.5, curve: Curves.easeIn),
       ),
     );
 
     moveLeft = Tween<double>(begin: 0, end: -100).animate(
       CurvedAnimation(
         parent: controller,
-        curve: Interval(0.5, 0.75, curve: Curves.easeIn),
+        curve: const Interval(0.5, 0.75, curve: Curves.easeIn),
       ),
     );
 
     moveDown = Tween<double>(begin: 0, end: 100).animate(
       CurvedAnimation(
         parent: controller,
-        curve: Interval(0.75, 1, curve: Curves.easeIn),
+        curve: const Interval(0.75, 1, curve: Curves.easeIn),
       ),
     );
 
@@ -96,7 +96,7 @@ class __RectangleState extends State<_Rectangle>
       child: Center(
         child: Container(
           color: Colors.red,
-          child: SizedBox(width: 100, height: 100),
+          child: const SizedBox(width: 100, height: 100),
         ),
       ),
     );

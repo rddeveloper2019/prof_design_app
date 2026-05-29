@@ -16,10 +16,10 @@ class NavigationPage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.pink,
           foregroundColor: Colors.white,
-          title: Text('Navigation Page'),
+          title: const Text('Navigation Page'),
         ),
-        floatingActionButton: FloatingButton(),
-        bottomNavigationBar: BottomNavigation(),
+        floatingActionButton: const FloatingButton(),
+        bottomNavigationBar: const BottomNavigation(),
       ),
     );
   }
@@ -32,16 +32,21 @@ class FloatingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: () {
-        final int number = Provider.of<NotificationModel>(context, listen: false).number;
-        final AnimationController? bounceController = Provider.of<NotificationModel>(
+        final int number = Provider.of<NotificationModel>(
           context,
           listen: false,
-        ).bounceController;
+        ).number;
+        final AnimationController? bounceController =
+            Provider.of<NotificationModel>(
+              context,
+              listen: false,
+            ).bounceController;
 
-        Provider.of<NotificationModel>(context, listen: false).number = number > 9 ? 1 : number + 1;
+        Provider.of<NotificationModel>(context, listen: false).number =
+            number > 9 ? 1 : number + 1;
         bounceController?.forward(from: 0.0);
       },
-      child: FaIcon(FontAwesomeIcons.gofore),
+      child: const FaIcon(FontAwesomeIcons.gofore),
     );
   }
 }
@@ -56,7 +61,7 @@ class BottomNavigation extends StatelessWidget {
       currentIndex: 0,
       selectedItemColor: Colors.pink,
       items: [
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
           icon: FaIcon(
             FontAwesomeIcons.bone,
             size: 30,
@@ -66,7 +71,7 @@ class BottomNavigation extends StatelessWidget {
         BottomNavigationBarItem(
           icon: Stack(
             children: [
-              FaIcon(
+              const FaIcon(
                 FontAwesomeIcons.bell,
                 size: 30,
               ),
@@ -79,15 +84,25 @@ class BottomNavigation extends StatelessWidget {
                   child: Bounce(
                     from: 10,
                     controller: (controller) {
-                      Provider.of<NotificationModel>(context, listen: false).bounceController = controller;
+                      Provider.of<NotificationModel>(
+                        context,
+                        listen: false,
+                      ).bounceController = controller;
                     },
                     child: Container(
                       width: 16,
                       height: 16,
-                      decoration: BoxDecoration(color: Colors.redAccent, shape: BoxShape.circle),
+                      decoration: const BoxDecoration(
+                        color: Colors.redAccent,
+                        shape: BoxShape.circle,
+                      ),
                       child: Text(
                         number > 9 ? '9+' : number.toString(),
-                        style: TextStyle(color: Colors.white, fontSize: 9, fontWeight: FontWeight.normal),
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 9,
+                          fontWeight: FontWeight.normal,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -99,7 +114,7 @@ class BottomNavigation extends StatelessWidget {
           label: 'Bell',
         ),
 
-        BottomNavigationBarItem(
+        const BottomNavigationBarItem(
           icon: FaIcon(
             FontAwesomeIcons.dog,
             size: 30,

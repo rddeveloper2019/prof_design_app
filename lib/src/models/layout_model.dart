@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:prof_design_app/src/pages/slide_show_page.dart';
 
 class LayoutModel with ChangeNotifier {
-  Widget _currentPage = SlideShowPage();
+  Widget _currentPage = const SlideShowPage();
   bool _isTablet = false;
 
   void navigate(BuildContext context, Widget page) {
@@ -13,7 +13,9 @@ class LayoutModel with ChangeNotifier {
       return;
     }
 
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => _currentPage));
+    Navigator.of(
+      context,
+    ).push(MaterialPageRoute(builder: (context) => _currentPage));
   }
 
   bool isLarge(BuildContext context) {

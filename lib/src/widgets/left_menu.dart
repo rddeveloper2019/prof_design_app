@@ -21,7 +21,7 @@ class LeftMenu extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.only(bottom: 20),
+              padding: const EdgeInsets.only(bottom: 20),
               width: double.infinity,
               height: 150,
               child: CircleAvatar(
@@ -36,7 +36,7 @@ class LeftMenu extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(child: ListOptions()),
+            const Expanded(child: ListOptions()),
             ListTile(
               leading: FaIcon(FontAwesomeIcons.lightbulb, color: reverseColor),
               title: Text(
@@ -56,7 +56,10 @@ class LeftMenu extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: FaIcon(FontAwesomeIcons.mobileRetro, color: reverseColor),
+              leading: FaIcon(
+                FontAwesomeIcons.mobileRetro,
+                color: reverseColor,
+              ),
               title: Text(
                 'Custom Mode',
                 style: TextStyle(

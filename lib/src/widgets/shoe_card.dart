@@ -6,11 +6,16 @@ class ShoeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double cardHeight = fullScreen ? 400 : 430;
+    final double imageHeight = cardHeight * 0.60;
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: fullScreen ? 5 : 30.0, vertical: 5),
+      padding: EdgeInsets.symmetric(
+        horizontal: fullScreen ? 5 : 30.0,
+        vertical: 5,
+      ),
       child: Container(
         width: double.infinity,
-        height: fullScreen ? 410 : 430,
+        height: cardHeight,
         decoration: BoxDecoration(
           color: const Color(0xfff8d468),
           borderRadius: BorderRadius.circular(50),
@@ -19,7 +24,14 @@ class ShoeCard extends StatelessWidget {
           children: [
             Column(
               children: [
-                const Hero(tag: 'ShoeCard', child: ShoeShadowed()),
+                Hero(
+                  tag: 'ShoeCard',
+                  child: Center(
+                    child: ShoeShadowed(
+                      imageHeight: imageHeight,
+                    ),
+                  ),
+                ),
                 if (!fullScreen) const Expanded(child: ShoeSizes()),
               ],
             ),
@@ -31,7 +43,11 @@ class ShoeCard extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  icon: const Icon(Icons.chevron_left, size: 50, color: Colors.white),
+                  icon: const Icon(
+                    Icons.chevron_left,
+                    size: 50,
+                    color: Colors.white,
+                  ),
                 ),
               ),
           ],
@@ -95,12 +111,22 @@ class ShoeSizeBox extends StatelessWidget {
       decoration: BoxDecoration(
         color: selected ? Colors.orange : Colors.white,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [if (selected) BoxShadow(color: Color(0xfff1a23a), blurRadius: 10, offset: Offset(0, 5))],
+        boxShadow: [
+          if (selected)
+            const BoxShadow(
+              color: Color(0xfff1a23a),
+              blurRadius: 10,
+              offset: Offset(0, 5),
+            ),
+        ],
       ),
       child: Center(
         child: Text(
           shoeSize.toStringAsFixed(1).replaceFirst('.0', ''),
-          style: TextStyle(color: selected ? Colors.white : Colors.orange, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            color: selected ? Colors.white : Colors.orange,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
@@ -108,8 +134,10 @@ class ShoeSizeBox extends StatelessWidget {
 }
 
 class ShoeShadowed extends StatelessWidget {
+  final double imageHeight;
   const ShoeShadowed({
     super.key,
+    required this.imageHeight,
   });
 
   @override
@@ -118,8 +146,12 @@ class ShoeShadowed extends StatelessWidget {
       padding: const EdgeInsets.all(50),
       child: Stack(
         children: [
-          Positioned(bottom: 20, right: 0, child: ShowShadow()),
-          Image.asset('assets/images/azul.png'),
+          const Positioned(bottom: 20, right: 0, child: ShowShadow()),
+          Image.asset(
+            'assets/images/azul.png',
+            height: imageHeight,
+            fit: BoxFit.fitHeight,
+          ),
         ],
       ),
     );
@@ -141,7 +173,9 @@ class ShowShadow extends StatelessWidget {
         decoration: BoxDecoration(
           // color: Colors.orange,
           borderRadius: BorderRadius.circular(100),
-          boxShadow: [BoxShadow(color: Color(0xffeaa14e), blurRadius: 40)],
+          boxShadow: [
+            const BoxShadow(color: Color(0xffeaa14e), blurRadius: 40),
+          ],
         ),
       ),
     );

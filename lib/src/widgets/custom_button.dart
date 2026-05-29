@@ -18,13 +18,20 @@ class CustomButton extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       height: height,
-      decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(100)),
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(100),
+      ),
       child: TextButton(
         onPressed: onPressed,
         child: Center(
           child: Text(
             title,
-            style: TextStyle(color: Colors.white, fontSize: height / 3, fontWeight: FontWeight.w700),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: height / 3,
+              fontWeight: FontWeight.w700,
+            ),
           ),
         ),
       ),

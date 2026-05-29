@@ -10,7 +10,9 @@ class ShoesAppPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    services.SystemChrome.setSystemUIOverlayStyle(services.SystemUiOverlayStyle.dark);
+    services.SystemChrome.setSystemUIOverlayStyle(
+      services.SystemUiOverlayStyle.dark,
+    );
     return const Scaffold(
       body: Stack(
         children: [

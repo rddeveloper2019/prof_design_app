@@ -27,10 +27,10 @@ class _LauncherPageState extends State<LauncherPage> {
           style: TextStyle(color: reverseColor),
         ),
       ),
-      drawer: Drawer(
+      drawer: const Drawer(
         child: LeftMenu(),
       ),
-      body: ListOptions(),
+      body: const ListOptions(),
     );
   }
 }

@@ -14,11 +14,11 @@ class _TwitterPageState extends State<TwitterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1da1f2),
+      backgroundColor: const Color(0xff1da1f2),
       appBar: AppBar(
-        backgroundColor: Color(0xff1da1f2),
+        backgroundColor: const Color(0xff1da1f2),
         foregroundColor: Colors.white,
-        title: Text('TwitterPage'),
+        title: const Text('TwitterPage'),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.pink,
@@ -27,14 +27,18 @@ class _TwitterPageState extends State<TwitterPage> {
             animate = !animate;
           });
         },
-        child: FaIcon(FontAwesomeIcons.play),
+        child: const FaIcon(FontAwesomeIcons.play),
       ),
       body: Center(
         child: ZoomOut(
           animate: animate,
-          delay: Duration(milliseconds: 500),
+          delay: const Duration(milliseconds: 500),
           from: 20,
-          child: FaIcon(FontAwesomeIcons.twitter, color: Colors.white, size: 40),
+          child: const FaIcon(
+            FontAwesomeIcons.twitter,
+            color: Colors.white,
+            size: 40,
+          ),
         ),
       ),
     );

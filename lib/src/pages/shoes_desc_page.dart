@@ -10,7 +10,9 @@ class ShoesDescPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    services.SystemChrome.setSystemUIOverlayStyle(services.SystemUiOverlayStyle.light);
+    services.SystemChrome.setSystemUIOverlayStyle(
+      services.SystemUiOverlayStyle.light,
+    );
     return const Scaffold(
       body: Column(
         children: [
@@ -31,7 +33,13 @@ class ShoesDescPage extends StatelessWidget {
                     height: 10,
                   ),
                   ColoredButtons(
-                    colors: [Colors.blueGrey, Colors.blue, Colors.orange, Colors.green, Colors.red],
+                    colors: [
+                      Colors.blueGrey,
+                      Colors.blue,
+                      Colors.orange,
+                      Colors.green,
+                      Colors.red,
+                    ],
                   ),
                   SizedBox(
                     height: 20,
@@ -89,7 +97,13 @@ class LikeButton extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.grey.shade100,
         shape: BoxShape.circle,
-        boxShadow: [const BoxShadow(blurRadius: 7, color: Colors.black54, offset: Offset(0, 4))],
+        boxShadow: [
+          const BoxShadow(
+            blurRadius: 7,
+            color: Colors.black54,
+            offset: Offset(0, 4),
+          ),
+        ],
       ),
       child: Center(
         child: IconButton(onPressed: () {}, icon: icon, iconSize: 30),

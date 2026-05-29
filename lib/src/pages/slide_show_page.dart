@@ -18,7 +18,7 @@ class SlideShowPage extends StatelessWidget {
           SvgPicture.asset('assets/slides/slide-2.svg'),
           SvgPicture.asset('assets/slides/slide-3.svg'),
           SvgPicture.asset('assets/slides/slide-4.svg'),
-          Center(child: Text('End')),
+          const Center(child: Text('End')),
         ],
       ),
       ShowSlider(
@@ -26,7 +26,7 @@ class SlideShowPage extends StatelessWidget {
           SvgPicture.asset('assets/slides/slide-3.svg'),
           SvgPicture.asset('assets/slides/slide-4.svg'),
           SvgPicture.asset('assets/slides/slide-5.svg'),
-          Center(child: Text('End')),
+          const Center(child: Text('End')),
         ],
       ),
     ];

@@ -18,11 +18,11 @@ class EmergencyPage extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: isLarge ? 0 : 250),
             child: ListView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               children: tombButtons,
             ),
           ),
-          if (!isLarge) IconHeader(),
+          if (!isLarge) const IconHeader(),
         ],
       ),
     );

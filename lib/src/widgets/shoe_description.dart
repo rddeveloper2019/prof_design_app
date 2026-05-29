@@ -20,7 +20,11 @@ class ShoeDescription extends StatelessWidget {
           ),
           Text(
             title,
-            style: const TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w700),
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 24,
+              fontWeight: FontWeight.w700,
+            ),
             textAlign: TextAlign.start,
           ),
           const SizedBox(
@@ -28,7 +32,12 @@ class ShoeDescription extends StatelessWidget {
           ),
           Text(
             description,
-            style: const TextStyle(color: Colors.black54, fontSize: 16, fontWeight: FontWeight.normal, height: 1.5),
+            style: const TextStyle(
+              color: Colors.black54,
+              fontSize: 16,
+              fontWeight: FontWeight.normal,
+              height: 1.5,
+            ),
           ),
         ],
       ),

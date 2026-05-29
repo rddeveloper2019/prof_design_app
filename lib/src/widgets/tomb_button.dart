@@ -22,7 +22,7 @@ class TombButton extends StatelessWidget {
     return InkWell(
       onTap: onPress,
       child: FadeInLeft(
-        duration: Duration(milliseconds: 250),
+        duration: const Duration(milliseconds: 250),
         child: Stack(
           children: [
             _TombButtonBackGround(icon: icon, color1: color1, color2: color2),
@@ -32,24 +32,24 @@ class TombButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(height: 140, width: 30),
+                const SizedBox(height: 140, width: 30),
                 FaIcon(icon, color: Colors.white, size: 50),
-                SizedBox(height: 140, width: 10),
+                const SizedBox(height: 140, width: 10),
                 Text(
                   name,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Spacer(),
-                FaIcon(
+                const Spacer(),
+                const FaIcon(
                   FontAwesomeIcons.chevronRight,
                   color: Colors.white,
                   size: 40,
                 ),
-                SizedBox(height: 140, width: 30),
+                const SizedBox(height: 140, width: 30),
               ],
             ),
           ],
@@ -64,7 +64,6 @@ class _TombButtonBackGround extends StatelessWidget {
   final Color color1;
   final Color color2;
   const _TombButtonBackGround({
-    super.key,
     required this.icon,
     required this.color1,
     required this.color2,

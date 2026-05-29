@@ -29,7 +29,10 @@ class AddToCartBox extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             height: 80,
             width: double.infinity,
-            decoration: BoxDecoration(color: Colors.grey.withAlpha(225), borderRadius: BorderRadius.circular(100)),
+            decoration: BoxDecoration(
+              color: Colors.grey.withAlpha(225),
+              borderRadius: BorderRadius.circular(100),
+            ),
 
             child: Row(
               children: [

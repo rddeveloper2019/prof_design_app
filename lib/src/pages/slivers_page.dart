@@ -8,7 +8,7 @@ class SliversPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       // body: _BoxList(),
       //body:  _Title(),
       body: Stack(children: [_MainScroll(), _NewListButton()]),
@@ -17,7 +17,7 @@ class SliversPage extends StatelessWidget {
 }
 
 class _NewListButton extends StatelessWidget {
-  const _NewListButton({super.key});
+  const _NewListButton();
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +28,12 @@ class _NewListButton extends StatelessWidget {
         onTap: () {},
         child: Container(
           width: MediaQuery.of(context).size.width * 0.85,
-          padding: EdgeInsets.symmetric(vertical: 10),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          decoration: const BoxDecoration(
             color: Colors.red,
             borderRadius: BorderRadius.only(topLeft: Radius.circular(50)),
           ),
-          child: Text(
+          child: const Text(
             'OK OK OK',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 38, color: Colors.white),
@@ -45,7 +45,7 @@ class _NewListButton extends StatelessWidget {
 }
 
 class _MainScroll extends StatelessWidget {
-  const _MainScroll({super.key});
+  const _MainScroll();
 
   @override
   Widget build(BuildContext context) {
@@ -58,8 +58,8 @@ class _MainScroll extends StatelessWidget {
         ),
         SliverList(
           delegate: SliverChildListDelegate([
-            ...List.generate(10, (i) => _Box()),
-            SizedBox(height: 100),
+            ...List.generate(10, (i) => const _Box()),
+            const SizedBox(height: 100),
           ]),
         ),
       ],
@@ -74,7 +74,7 @@ class _SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
     double shrinkOffset,
     bool overlapsContent,
   ) {
-    return SizedBox.expand(child: _Title());
+    return const SizedBox.expand(child: _Title());
   }
 
   @override
@@ -90,21 +90,21 @@ class _SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
 }
 
 class _BoxList extends StatelessWidget {
-  const _BoxList({super.key});
+  const _BoxList();
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: 20,
       itemBuilder: (BuildContext ctx, int idx) {
-        return SliverToBoxAdapter(child: _Box());
+        return const SliverToBoxAdapter(child: _Box());
       },
     );
   }
 }
 
 class _Box extends StatelessWidget {
-  const _Box({super.key});
+  const _Box();
 
   @override
   Widget build(BuildContext context) {
@@ -112,15 +112,15 @@ class _Box extends StatelessWidget {
     return FadeInLeft(
       child: Container(
         height: 100,
-        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        padding: EdgeInsets.all(10),
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: color,
         ),
         child: Text(
           color.toString(),
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
             fontSize: 16,
@@ -132,34 +132,34 @@ class _Box extends StatelessWidget {
 }
 
 class _Title extends StatelessWidget {
-  const _Title({super.key});
+  const _Title();
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
         Container(
-          margin: EdgeInsets.symmetric(vertical: 10),
-          child: Text(
+          margin: const EdgeInsets.symmetric(vertical: 10),
+          child: const Text(
             'New',
             style: TextStyle(color: Color(0xff532128), fontSize: 50),
           ),
         ),
         Stack(
           children: [
-            SizedBox(width: 100),
+            const SizedBox(width: 100),
             Positioned(
               bottom: 8,
               child: Container(
                 width: 150,
                 height: 8,
-                decoration: BoxDecoration(color: Color(0xfff7cdd5)),
+                decoration: const BoxDecoration(color: Color(0xfff7cdd5)),
               ),
             ),
             Container(
-              child: Text(
+              child: const Text(
                 'List',
                 textAlign: TextAlign.center,
                 style: TextStyle(

@@ -51,7 +51,7 @@ class _PinterestMenuState extends State<PinterestMenu> {
       bottom: 30,
       child: AnimatedOpacity(
         opacity: widget.hidden ? 0 : 1,
-        duration: Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 200),
         child: Container(
           width: 250,
           height: 60,
@@ -59,7 +59,7 @@ class _PinterestMenuState extends State<PinterestMenu> {
             color: Colors.white.withAlpha(230),
             borderRadius: BorderRadius.circular(100),
             boxShadow: [
-              BoxShadow(
+              const BoxShadow(
                 color: Colors.black38,
                 offset: Offset(0, 0),
                 blurRadius: 10,
@@ -123,7 +123,7 @@ class PinterestMenuItem extends StatelessWidget {
       behavior: HitTestBehavior.translucent,
       child: AnimatedContainer(
         padding: const EdgeInsets.all(5.0),
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         child: Icon(
           item.icon,
           color: isActive ? Colors.black87 : Colors.blueGrey,

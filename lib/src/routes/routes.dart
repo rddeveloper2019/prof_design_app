@@ -13,17 +13,61 @@ import 'package:prof_design_app/src/pages/slivers_page.dart';
 import 'package:prof_design_app/src/pages/twitter_page.dart';
 
 final List<Route> pageRoutes = [
-  Route(icon: FontAwesomeIcons.slideshare, title: 'Slideshow', page: SlideShowPage()),
-  Route(icon: FontAwesomeIcons.truckMedical, title: 'Emergency', page: EmergencyPage()),
-  Route(icon: FontAwesomeIcons.heading, title: 'Headers', page: HeadersPage()),
-  Route(icon: FontAwesomeIcons.peopleCarryBox, title: 'AnimatedCube', page: AnimatedCubePage()),
-  Route(icon: FontAwesomeIcons.circleNotch, title: 'RadialProgress', page: RadialProgressPage()),
-  Route(icon: FontAwesomeIcons.pinterest, title: 'Pinterest', page: PinterestPage()),
-  Route(icon: FontAwesomeIcons.twitter, title: 'Twitter', page: TwitterPage()),
-  Route(icon: FontAwesomeIcons.mobileScreen, title: 'Slivers', page: SliversPage()),
-  Route(icon: FontAwesomeIcons.map, title: 'Navigation', page: NavigationPage()),
-  Route(icon: FontAwesomeIcons.gofore, title: 'AnimateDo', page: AnimateDoPage()),
-  Route(icon: FontAwesomeIcons.shop, title: 'Shoes App', page: ShoesAppPage()),
+  Route(
+    icon: FontAwesomeIcons.slideshare,
+    title: 'Slideshow',
+    page: const SlideShowPage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.truckMedical,
+    title: 'Emergency',
+    page: const EmergencyPage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.heading,
+    title: 'Headers',
+    page: const HeadersPage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.peopleCarryBox,
+    title: 'AnimatedCube',
+    page: const AnimatedCubePage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.circleNotch,
+    title: 'RadialProgress',
+    page: const RadialProgressPage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.pinterest,
+    title: 'Pinterest',
+    page: const PinterestPage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.twitter,
+    title: 'Twitter',
+    page: const TwitterPage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.mobileScreen,
+    title: 'Slivers',
+    page: const SliversPage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.map,
+    title: 'Navigation',
+    page: const NavigationPage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.gofore,
+    title: 'AnimateDo',
+    page: const AnimateDoPage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.shop,
+    title: 'Shoes App',
+    page: const ShoesAppPage(),
+  ),
 ];
 
 class Route {

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:prof_design_app/src/models/layout_model.dart';
-import 'package:prof_design_app/src/routes/routes.dart';
 import 'package:prof_design_app/src/theme/theme.dart';
 import 'package:prof_design_app/src/widgets/left_menu.dart';
-import 'package:prof_design_app/src/widgets/list_options.dart';
 import 'package:provider/provider.dart';
 
 class LauncherTabletPage extends StatefulWidget {
@@ -34,8 +31,16 @@ class _LauncherTabletPageState extends State<LauncherTabletPage> {
       // drawer: MainMenu(),
       body: Row(
         children: [
-          SizedBox(width: 300, height: double.infinity, child: LeftMenu()),
-          Container(width: 2, height: double.infinity, color: appTheme.currentTheme.primaryColorDark),
+          const SizedBox(
+            width: 300,
+            height: double.infinity,
+            child: LeftMenu(),
+          ),
+          Container(
+            width: 2,
+            height: double.infinity,
+            color: appTheme.currentTheme.primaryColorDark,
+          ),
           Expanded(child: page),
         ],
       ),

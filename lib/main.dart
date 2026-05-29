@@ -3,9 +3,7 @@ import 'package:prof_design_app/src/models/layout_model.dart';
 
 import 'package:prof_design_app/src/pages/launcher_page.dart';
 import 'package:prof_design_app/src/pages/launcher_tablet_page.dart';
-import 'package:prof_design_app/src/pages/shoes_app_page.dart';
 import 'package:prof_design_app/src/theme/theme.dart';
-import 'package:prof_design_app/src/pages/shoes_desc_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -34,12 +32,14 @@ class MyApp extends StatelessWidget {
       theme: appTheme.currentTheme,
       home: OrientationBuilder(
         builder: (BuildContext context, Orientation orientation) {
-          final isTablet = orientation == Orientation.portrait && MediaQuery.of(context).size.width > 700;
+          final isTablet =
+              orientation == Orientation.portrait &&
+              MediaQuery.of(context).size.width > 700;
           layoutModel.isTablet = isTablet;
           if (isTablet) {
-            return LauncherTabletPage();
+            return const LauncherTabletPage();
           }
-          return LauncherPage();
+          return const LauncherPage();
         },
       ),
     );

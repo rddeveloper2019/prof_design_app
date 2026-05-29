@@ -17,7 +17,10 @@ class AnimateDoPage extends StatelessWidget {
       appBar: AppBar(
         foregroundColor: reverseColor,
         backgroundColor: appTheme.currentTheme.scaffoldBackgroundColor,
-        title: const FadeIn(delay: Duration(milliseconds: 500), child: Text('Animate_do')),
+        title: const FadeIn(
+          delay: Duration(milliseconds: 500),
+          child: Text('Animate_do'),
+        ),
         actions: [
           IconButton(
             onPressed: () {},

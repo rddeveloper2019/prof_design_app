@@ -45,7 +45,8 @@ class _ShowSliderState extends State<ShowSlider> {
               ),
             ),
           ),
-          if (widget.showDots) _Dots(length: widget.slides.length, activeIndex: activeIndex),
+          if (widget.showDots)
+            _Dots(length: widget.slides.length, activeIndex: activeIndex),
         ],
       ),
     );
@@ -81,14 +82,14 @@ class _Dot extends StatelessWidget {
     final appTheme = Provider.of<ThemeChanger>(context);
 
     return AnimatedContainer(
-      margin: EdgeInsets.symmetric(horizontal: 3),
+      margin: const EdgeInsets.symmetric(horizontal: 3),
       width: isActive ? 14 : 12,
       height: isActive ? 14 : 12,
       decoration: BoxDecoration(
         color: isActive ? appTheme.currentTheme.primaryColorDark : Colors.grey,
         shape: BoxShape.circle,
       ),
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
     );
   }
 }

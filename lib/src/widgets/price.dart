@@ -12,7 +12,11 @@ class Price extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "\$$price",
-      style: const TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),
+      style: const TextStyle(
+        color: Colors.black,
+        fontSize: 28,
+        fontWeight: FontWeight.bold,
+      ),
       textAlign: TextAlign.start,
     );
   }

@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:prof_design_app/src/models/audioplayer_model.dart';
+import 'package:prof_design_app/src/models/audio_player_model.dart';
 import 'package:provider/provider.dart';
 
 class PlayerIntro extends StatelessWidget {
@@ -17,7 +17,7 @@ class PlayerIntro extends StatelessWidget {
 }
 
 class _ProgressBar extends StatelessWidget {
-  const _ProgressBar({super.key});
+  const _ProgressBar();
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class _ProgressBar extends StatelessWidget {
         ),
         Text(
           audioPlayerModel.currentSecond,
-          style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.normal),
+          style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.normal),
           textAlign: TextAlign.start,
         ),
       ],
@@ -59,7 +59,7 @@ class _ProgressBar extends StatelessWidget {
 }
 
 class _DiscImage extends StatelessWidget {
-  const _DiscImage({super.key});
+  const _DiscImage();
 
   @override
   Widget build(BuildContext context) {

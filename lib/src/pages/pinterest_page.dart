@@ -75,10 +75,8 @@ class _PinterestGridState extends State<PinterestGrid> {
       controller: scrollController,
       crossAxisCount: 4,
       itemCount: items.length,
-      itemBuilder: (BuildContext context, int index) =>
-          PinterestItem(index: index),
-      staggeredTileBuilder: (int index) =>
-          StaggeredTile.count(2, index.isEven ? 2 : 3),
+      itemBuilder: (BuildContext context, int index) => PinterestItem(index: index),
+      staggeredTileBuilder: (int index) => StaggeredTile.count(2, index.isEven ? 2 : 3),
       mainAxisSpacing: 4.0,
       crossAxisSpacing: 4.0,
     );

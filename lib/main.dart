@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:prof_design_app/src/models/audioplayer_model.dart';
+import 'package:prof_design_app/src/models/audio_player_model.dart';
 import 'package:prof_design_app/src/models/layout_model.dart';
 
 import 'package:prof_design_app/src/pages/launcher_page.dart';
 import 'package:prof_design_app/src/pages/launcher_tablet_page.dart';
-import 'package:prof_design_app/src/pages/music_player_page.dart';
 import 'package:prof_design_app/src/theme/theme.dart';
 import 'package:provider/provider.dart';
 
@@ -46,11 +45,5 @@ class MyApp extends StatelessWidget {
         },
       ),
     );
-    // return MaterialApp(
-    //   debugShowCheckedModeBanner: false,
-    //   title: 'Professional Designs App',
-    //   theme: appTheme.currentTheme,
-    //   home: const MusicPlayerPage(),
-    // );
   }
 }

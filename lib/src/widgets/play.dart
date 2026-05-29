@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:prof_design_app/src/models/audioplayer_model.dart';
+import 'package:prof_design_app/src/models/audio_player_model.dart';
 import 'package:provider/provider.dart';
 
 class Play extends StatefulWidget {

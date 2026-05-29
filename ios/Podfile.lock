@@ -1,27 +1,28 @@
 PODS:
-  - assets_audio_player (0.0.1):
-    - Flutter
-  - assets_audio_player_web (0.0.1):
+  - audio_session (0.0.1):
     - Flutter
   - Flutter (1.0.0)
+  - just_audio (0.0.1):
+    - Flutter
+    - FlutterMacOS
 
 DEPENDENCIES:
-  - assets_audio_player (from `.symlinks/plugins/assets_audio_player/ios`)
-  - assets_audio_player_web (from `.symlinks/plugins/assets_audio_player_web/ios`)
+  - audio_session (from `.symlinks/plugins/audio_session/ios`)
   - Flutter (from `Flutter`)
+  - just_audio (from `.symlinks/plugins/just_audio/darwin`)
 
 EXTERNAL SOURCES:
-  assets_audio_player:
-    :path: ".symlinks/plugins/assets_audio_player/ios"
-  assets_audio_player_web:
-    :path: ".symlinks/plugins/assets_audio_player_web/ios"
+  audio_session:
+    :path: ".symlinks/plugins/audio_session/ios"
   Flutter:
     :path: Flutter
+  just_audio:
+    :path: ".symlinks/plugins/just_audio/darwin"
 
 SPEC CHECKSUMS:
-  assets_audio_player: ae418728ee1b31f11556504fda8034639e20ce44
-  assets_audio_player_web: ce9341347867b03c2eb749d927e18ec009dbe763
+  audio_session: 9bb7f6c970f21241b19f5a3658097ae459681ba0
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  just_audio: 4e391f57b79cad2b0674030a00453ca5ce817eed
 
 PODFILE CHECKSUM: 3c63482e143d1b91d2d2560aee9fb04ecc74ac7e
 

@@ -1,4 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:prof_design_app/src/models/audioplayer_model.dart';
+import 'package:provider/provider.dart';
 
 class PlayerIntro extends StatelessWidget {
   const PlayerIntro({
@@ -18,11 +21,13 @@ class _ProgressBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final audioPlayerModel = Provider.of<AudioPlayerModel>(context);
+
     return Column(
       children: [
-        const Text(
-          '00:00',
-          style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.normal),
+        Text(
+          audioPlayerModel.songTotalDuration,
+          style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.normal),
           textAlign: TextAlign.start,
         ),
         Padding(
@@ -36,15 +41,15 @@ class _ProgressBar extends StatelessWidget {
                 decoration: BoxDecoration(color: Colors.white.withAlpha(125), borderRadius: BorderRadius.circular(10)),
               ),
               Container(
-                height: 120,
+                height: 230 * audioPlayerModel.percentage,
                 width: 5,
                 decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10)),
               ),
             ],
           ),
         ),
-        const Text(
-          '00:00',
+        Text(
+          audioPlayerModel.currentSecond,
           style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.normal),
           textAlign: TextAlign.start,
         ),
@@ -53,38 +58,20 @@ class _ProgressBar extends StatelessWidget {
   }
 }
 
-class _DiscImage extends StatefulWidget {
+class _DiscImage extends StatelessWidget {
   const _DiscImage({super.key});
 
   @override
-  State<_DiscImage> createState() => _DiscImageState();
-}
-
-class _DiscImageState extends State<_DiscImage> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _animation;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 5),
-    );
-    _animation = Tween<double>(begin: 0, end: 1).animate(_controller);
-    // _controller.repeat();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return RotationTransition(
-      turns: _animation,
+    final audioPlayerModel = Provider.of<AudioPlayerModel>(context);
+    return SpinPerfect(
+      duration: const Duration(seconds: 10),
+      animate: true,
+      infinite: true,
+      manualTrigger: true,
+      controller: (controller) {
+        audioPlayerModel.controller = controller;
+      },
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: const BoxDecoration(

@@ -4,6 +4,7 @@ import 'package:prof_design_app/src/pages/animated_cube_page.dart';
 import 'package:prof_design_app/src/pages/animated_do_page.dart';
 import 'package:prof_design_app/src/pages/emergency_page.dart';
 import 'package:prof_design_app/src/pages/headers_page.dart';
+import 'package:prof_design_app/src/pages/music_player_page.dart';
 import 'package:prof_design_app/src/pages/navigation_page.dart';
 import 'package:prof_design_app/src/pages/pinterest_page.dart';
 import 'package:prof_design_app/src/pages/radial_progress_page.dart';
@@ -67,6 +68,11 @@ final List<Route> pageRoutes = [
     icon: FontAwesomeIcons.shop,
     title: 'Shoes App',
     page: const ShoesAppPage(),
+  ),
+  Route(
+    icon: FontAwesomeIcons.headphones,
+    title: 'Music Player App',
+    page: const MusicPlayerPage(),
   ),
 ];
 

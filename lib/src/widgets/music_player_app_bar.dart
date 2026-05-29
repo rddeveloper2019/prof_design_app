@@ -12,9 +12,14 @@ class MusicPlayerAppBar extends StatelessWidget {
         padding: const EdgeInsets.only(top: 10.0),
         child: Row(
           children: [
-            FaIcon(
-              FontAwesomeIcons.chevronLeft,
-              color: Colors.white.withAlpha(205),
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: FaIcon(
+                FontAwesomeIcons.chevronLeft,
+                color: Colors.white.withAlpha(205),
+              ),
             ),
             const Spacer(),
             FaIcon(

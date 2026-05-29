@@ -1,60 +1,59 @@
 import 'package:flutter/material.dart';
 
-class AudioPlayerModel  with ChangeNotifier {
-
+class AudioPlayerModel with ChangeNotifier {
   bool _playing = false;
-  Duration _songDuration = new Duration( milliseconds: 0 );
-  Duration _current      = new Duration( milliseconds: 0 );
+  Duration _songDuration = const Duration(seconds: 0);
+  Duration _current = const Duration(seconds: 0);
 
+  String get songTotalDuration => printDuration(_songDuration);
+  String get currentSecond => printDuration(_current);
 
-  String get songTotalDuration => this.printDuration( this._songDuration );
-  String get currentSecond     => this.printDuration( this._current );
+  double get percentage => _songDuration.inSeconds > 0 ? _current.inSeconds / _songDuration.inSeconds : 0;
 
-  double get porcentaje => ( this._songDuration.inSeconds > 0) 
-                            ?  this._current.inSeconds / this._songDuration.inSeconds
-                            : 0;
+  AnimationController? _controller;
 
+  Duration get current => _current;
 
-
-  late AnimationController _controller;
-  set controller( AnimationController valor ) {
-    this._controller = valor;
-  }
-  AnimationController get controller => this._controller;
-
-  bool get playing => this._playing;
-  set playing( bool valor ) {
-    this._playing = valor;
+  set current(Duration value) {
+    _current = value;
     notifyListeners();
   }
 
-  Duration get songDuration => this._songDuration;
-  set songDuration( Duration valor ) {
-    this._songDuration = valor;
+  Duration get songDuration => _songDuration;
+
+  set songDuration(Duration value) {
+    _songDuration = value;
     notifyListeners();
   }
 
-  Duration get current => this._current;
-  set current( Duration valor ) {
-    this._current = valor;
+  bool get playing => _playing;
+
+  set playing(bool value) {
+    _playing = value;
     notifyListeners();
   }
 
+  AnimationController? get controller => _controller;
+
+  set controller(AnimationController controller) {
+    _controller = controller;
+  }
 
   String printDuration(Duration duration) {
-  
     String twoDigits(int n) {
       if (n >= 10) return "$n";
       return "0$n";
     }
 
-    String twoDigitMinutes = twoDigits(duration.inMinutes.remainder(60));
-    String twoDigitSeconds = twoDigits(duration.inSeconds.remainder(60));
-    // return "${twoDigits(duration.inHours)}:$twoDigitMinutes:$twoDigitSeconds";
+    String twoDigitMinutes = twoDigits(duration.inMinutes % 60);
+    String twoDigitSeconds = twoDigits(duration.inSeconds % 60);
+
     return "$twoDigitMinutes:$twoDigitSeconds";
   }
 
-
+  @override
+  void dispose() {
+    _controller?.dispose();
+    super.dispose();
+  }
 }
-
-
